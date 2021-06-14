@@ -20,7 +20,7 @@ public class UserController {
     }
 
 //    http://localhost:8080/add?name=asdasd&age=13  用postman测试
-    @PostMapping("/add")
+    @GetMapping("/add")
     public User add(@RequestParam("name") String name, @RequestParam("age") int age){
         User user =new User();
         user.setName(name);
