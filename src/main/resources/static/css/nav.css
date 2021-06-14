@@ -1,0 +1,18 @@
+
+
+.layui-tab-content {
+    background-color: #a5a2a2;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.nav_child {
+    background-color: #f64a4a;
+}
+
+.nav_parent a:hover{
+    color:darkred;
+}
