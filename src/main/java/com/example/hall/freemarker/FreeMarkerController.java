@@ -22,4 +22,9 @@ public class FreeMarkerController {
         map.put("userList1", userList);
         return "/index/index";
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "/test/test";
+    }
 }
