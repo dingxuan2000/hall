@@ -8,29 +8,46 @@
 </head>
 <body>
 <h1>hello word</h1>
-<button id="add">click</button>
+<button id="add">add</button>
 <button id="delete">delete</button>
 <script>
     const add = document.getElementById("add");
     const deleteById = document.getElementById("delete");
 
-    let name = "zanyuan";
-    let age = 12;
-
-    add.addEventListener("click", ()=>{
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:8080/addAll", true);
-        xhr.setRequestHeader("Content-Type", "application/json");
-        let data = JSON.stringify({ "name": name, "age": age });
-        xhr.send(data);
-    })
-
+    // let name = "zanyuan";
+    // let age = 12;
+    //
+    // add.addEventListener("click", ()=>{
+    //     let xhr = new XMLHttpRequest();
+    //     xhr.open("POST", "http://localhost:8080/addAll", true);
+    //     xhr.setRequestHeader("Content-Type", "application/json");
+    //     let data = JSON.stringify({ "name": name, "age": age });
+    //     xhr.send(data);
+    // })
+    //
     // deleteById.addEventListener("click", ()=>{
     //     let xhr = new XMLHttpRequest();
     //     xhr.open("DELETE", "http://localhost:8080/deletebyid/5");
     //     xhr.setRequestHeader("Content-Type", "application/json");
     //     xhr.send();
     // })
+
+    add.addEventListener("click", ()=>{
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8080/addHallManager", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        let data1 = JSON.stringify({
+            "hall_name": "社区",
+            "hall_community": "小区",
+            "hall_house": "小区名字",
+            "hall_address": "地址",
+            "hall_area": 42,
+            "hall_table_num": 100,
+            "hall_deposit": 50
+        });
+        xhr.send(data1);
+    })
+
 
 
 </script>

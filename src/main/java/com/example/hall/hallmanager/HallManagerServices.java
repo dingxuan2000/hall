@@ -1,4 +1,4 @@
-package com.example.hall.mysql;
+package com.example.hall.hallmanager;
 
 import com.example.hall.services.Services;
 import lombok.AllArgsConstructor;
@@ -6,26 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 @AllArgsConstructor
 @Service
 @Transactional
-public class UserServices implements Services<User> {
+public class HallManagerServices implements Services<HallManager> {
 
     @Autowired
-    UserDao userDao;
+    HallManagerDao hallManagerDao;
 
     @Override
-    public User save(User user) {
-        userDao.save(user);
-        return user;
+    public HallManager save(HallManager hallManager) {
+        hallManagerDao.save(hallManager);
+        return hallManager;
     }
 
     @Override
-    public User deleteById(Integer id){
-        User user = userDao.getById(id);
-        userDao.deleteById(id);
-        return user;
+    public HallManager deleteById(Integer anId) {
+        return null;
     }
-
 }
