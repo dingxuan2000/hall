@@ -2,7 +2,11 @@ package com.example.hall.mysql;
 
 import freemarker.cache.StrongCacheStorage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import javax.validation.Valid;
 
 import java.util.List;
 
@@ -12,6 +16,9 @@ public class UserController {
     @Autowired
     UserDao userDao;
 
+    @Autowired
+    private UserServices UserServices;
+
 //    http://localhost:8080/getAll
     @GetMapping("/getAll")
     public List getAll(){
@@ -20,7 +27,7 @@ public class UserController {
     }
 
 //    http://localhost:8080/add?name=asdasd&age=13  用postman测试
-    @PostMapping("/add")
+    @GetMapping("/add")
     public User add(@RequestParam("name") String name, @RequestParam("age") int age){
         User user =new User();
         user.setName(name);
@@ -43,4 +50,24 @@ public class UserController {
         return "delete All";
     }
 
+
+    @PostMapping(path="/addAll", produces = "application/json")
+    public ResponseEntity<User> addUser(@Valid @RequestBody User user){
+        System.out.println("[add one user]");
+        return new ResponseEntity<>(UserServices.save(user), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping(path="/deletebyid/{id}", produces = "application/json")
+    public ResponseEntity<User> deleteUserById(@PathVariable Integer id){
+        System.out.println("[delete one user]");
+        return new ResponseEntity<>(UserServices.deleteById(id), HttpStatus.OK);
+    }
+
+
+//    @RequestMapping(value = "/addAll", method = RequestMethod.POST)
+//    public String addUser(User user){
+//
+//        UserServices.save(user);
+//        return "success";
+//    }
 }
