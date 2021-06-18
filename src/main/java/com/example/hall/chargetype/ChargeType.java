@@ -1,7 +1,6 @@
 package com.example.hall.chargetype;
 
-//public class ChargeType {
-//}
+
 
 import org.hibernate.annotations.GenericGenerator;
 

@@ -21,11 +21,26 @@ public class ChargeTypeServices implements Services<ChargeType> {
         return chargeType;
     }
 
+
     @Override
-    public ChargeType deleteById(Integer anId) {
-        return null;
+    public ChargeType deleteById(Integer id) {
+
+        if(!chargeTypeDao.existsById(id)){
+            System.out.println("NotFoundException: "+ "id is not in the DB");
+        }
+
+        try {
+            ChargeType chargeType = chargeTypeDao.findById(id).orElse(null);
+            chargeTypeDao.deleteById(id);
+            return chargeType;
+        }catch (Exception e){
+            System.out.println("VehicleServiceValidationException");
+            return null;
+        }
+
+
     }
+
+
 }
 
-//public class ChargeTypeServices {
-//}
