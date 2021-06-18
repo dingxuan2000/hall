@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.security.PrivateKey;
 import java.util.List;
 
 @Controller
@@ -26,5 +25,10 @@ public class FreeMarkerController {
     @GetMapping("/test")
     public String test(){
         return "/test/test";
+    }
+
+    @GetMapping("/test2")
+    public String test2(){
+        return "/test/test2";
     }
 }
