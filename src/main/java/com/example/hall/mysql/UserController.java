@@ -55,11 +55,11 @@ public class UserController {
         return new ResponseEntity<>(UserServices.save(user), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(path="/deletebyid/{id}", produces = "application/json")
-    public ResponseEntity<User> deleteUserById(@PathVariable Integer id){
-        System.out.println("[delete one user]");
-        return new ResponseEntity<>(UserServices.deleteById(id), HttpStatus.OK);
-    }
+//    @DeleteMapping(path="/deletebyid/{id}", produces = "application/json")
+//    public ResponseEntity<User> deleteUserById(@PathVariable Integer id){
+//        System.out.println("[delete one user]");
+//        return new ResponseEntity<>(UserServices.deleteById(id), HttpStatus.OK);
+//    }
 
 
 //    @RequestMapping(value = "/addAll", method = RequestMethod.POST)

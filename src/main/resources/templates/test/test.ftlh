@@ -9,7 +9,7 @@
 <body>
 <h1>hello word</h1>
 <button id="add">add</button>
-<button id="delete">delete</button>
+<button onclick="sendDeleteRequest(1)" id="delete">delete</button>
 <script>
     const add = document.getElementById("add");
     const deleteById = document.getElementById("delete");
@@ -47,6 +47,13 @@
         });
         xhr.send(data1);
     })
+
+    function sendDeleteRequest(hall_id){
+        let xhr = new XMLHttpRequest();
+        xhr.open("DELETE", "http://localhost:8080/deletebyid/${hall_id}");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send();
+    }
 
 
 
