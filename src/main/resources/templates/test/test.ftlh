@@ -48,6 +48,14 @@
         xhr.send(data1);
     })
 
+    deleteById.addEventListener("click", ()=>{
+        console.log("hello");
+    let xhr = new XMLHttpRequest();
+    xhr.open("DELETE", "http://localhost:8080/deletebyid/1");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send();
+    })
+
 
 
 </script>

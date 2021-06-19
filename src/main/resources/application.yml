@@ -11,6 +11,7 @@ spring:
     password: Zhenjiangwtx123
 
 
+
     hikari:
       connection-init-sql: set names utf8mb4
     tomcat:

@@ -1,7 +1,7 @@
-package com.example.hall.hallmanager;
+package com.example.hall.chargetype;
+
 
 import com.example.hall.services.Services;
-import javassist.NotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,28 +10,29 @@ import org.springframework.transaction.annotation.Transactional;
 @AllArgsConstructor
 @Service
 @Transactional
-public class HallManagerServices implements Services<HallManager> {
+public class ChargeTypeServices implements Services<ChargeType> {
 
     @Autowired
-    HallManagerDao hallManagerDao;
+    ChargeTypeDao chargeTypeDao;
 
     @Override
-    public HallManager save(HallManager hallManager) {
-        hallManagerDao.save(hallManager);
-        return hallManager;
+    public ChargeType save(ChargeType chargeType) {
+        chargeTypeDao.save(chargeType);
+        return chargeType;
     }
 
-    @Override
-    public HallManager deleteById(Integer id) {
 
-        if(!hallManagerDao.existsById(id)){
+    @Override
+    public ChargeType deleteById(Integer id) {
+
+        if(!chargeTypeDao.existsById(id)){
             System.out.println("NotFoundException: "+ "id is not in the DB");
         }
 
         try {
-            HallManager hallManager = hallManagerDao.findById(id).orElse(null);
-            hallManagerDao.deleteById(id);
-            return hallManager;
+            ChargeType chargeType = chargeTypeDao.findById(id).orElse(null);
+            chargeTypeDao.deleteById(id);
+            return chargeType;
         }catch (Exception e){
             System.out.println("VehicleServiceValidationException");
             return null;
@@ -39,4 +40,7 @@ public class HallManagerServices implements Services<HallManager> {
 
 
     }
+
+
 }
+

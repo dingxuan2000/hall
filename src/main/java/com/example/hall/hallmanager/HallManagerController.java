@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -20,6 +18,12 @@ public class HallManagerController {
     public ResponseEntity<HallManager> addManagement(@Valid @RequestBody HallManager hallManager){
         System.out.println("[add one hall]");
         return new ResponseEntity<>(hallManagerServices.save(hallManager), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping(path="/deletebyid/{id}", produces = "application/json")
+    public ResponseEntity<HallManager> deleteHallManagerById(@PathVariable Integer id){
+        System.out.println("[Delete one hall manager] parameters: "+ id);
+        return new ResponseEntity<>(hallManagerServices.deleteById(id), HttpStatus.OK);
     }
 
 }

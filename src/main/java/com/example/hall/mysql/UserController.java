@@ -1,13 +1,11 @@
 package com.example.hall.mysql;
 
-import freemarker.cache.StrongCacheStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -57,11 +55,11 @@ public class UserController {
         return new ResponseEntity<>(UserServices.save(user), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(path="/deletebyid/{id}", produces = "application/json")
-    public ResponseEntity<User> deleteUserById(@PathVariable Integer id){
-        System.out.println("[delete one user]");
-        return new ResponseEntity<>(UserServices.deleteById(id), HttpStatus.OK);
-    }
+//    @DeleteMapping(path="/deletebyid/{id}", produces = "application/json")
+//    public ResponseEntity<User> deleteUserById(@PathVariable Integer id){
+//        System.out.println("[delete one user]");
+//        return new ResponseEntity<>(UserServices.deleteById(id), HttpStatus.OK);
+//    }
 
 
 //    @RequestMapping(value = "/addAll", method = RequestMethod.POST)
