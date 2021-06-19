@@ -46,8 +46,8 @@
 
                     </a>
                     <dl id="list1" class="layui-nav-child nav_child">
-                        <dd class="nav_child2" onclick="changeDdColor('list1_font');"><a id="list1_font"
-                                                                                         href="javascript:;" style="color: rgb(183,36,36);">
+                        <dd class="nav_child2" ><a id="list1_font"
+                                                   href="/test.html" >
                                 预约信息</a></dd>
                     </dl>
                 </li>
@@ -58,8 +58,8 @@
                         <i id="change_icon2" class="layui-icon layui-icon-star-fill icon_li"></i>&nbsp;
                         <span id="change_text2" class="text_color">物业登记</span></a>
                     <dl id="list2" class="layui-nav-child nav_child">
-                        <dd class="nav_child2" onclick="changeDdColor('list2_font');"><a id="list2_font"
-                                                                                         href="javascript:;" style="color: rgb(183,36,36);">预约信息</a></dd>
+                        <dd class="nav_child2" ><a id="list2_font"
+                                                   href="javascript:;" >预约信息</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item border_bottom">
@@ -69,14 +69,14 @@
                         <i id="change_icon3" class="layui-icon layui-icon-form icon_li"></i>&nbsp;
                         <span id="change_text3" class="text_color">基础数据</span></a>
                     <dl id="list3" class="layui-nav-child nav_child list3_select">
-                        <dd id="list3_1" class="nav_child2 list3_one" onclick="changeDdColor('list3_font1');"><a
-                                    id="list3_font1" href="javascript:;" style="color: rgb(183,36,36);">喜宴厅管理</a></dd>
-                        <dd id="list3_2" class="nav_child2 list3_one" onclick="changeDdColor('list3_font2');"><a
-                                    id="list3_font2" href="javascript:;" style="color: rgb(183,36,36);">喜宴厅信息</a></dd>
-                        <dd id="list3_3" class="nav_child2 list3_one" onclick="changeDdColor('list3_font3');"><a
-                                    id="list3_font3" href="javascript:;" style="color: rgb(183,36,36);">水电气表</a></dd>
-                        <dd id="list3_4" class="nav_child2 list3_one" onclick="changeDdColor('list3_font4');"><a
-                                    id="list3_font4" href="javascript:;" style="color: rgb(183,36,36);">预定注意事项</a></dd>
+                        <dd id="list3_1" class="nav_child2 list3_one" ><a
+                                    id="list3_font1" href="javascript:;" >喜宴厅管理</a></dd>
+                        <dd id="list3_2" class="nav_child2 list3_one" ><a
+                                    id="list3_font2" href="javascript:;" >喜宴厅信息</a></dd>
+                        <dd id="list3_3" class="nav_child2 list3_one" ><a
+                                    id="list3_font3" href="javascript:;" >水电气表</a></dd>
+                        <dd id="list3_4" class="nav_child2 list3_one" ><a
+                                    id="list3_font4" href="javascript:;" >预定注意事项</a></dd>
 
                     </dl>
                 </li>
@@ -87,10 +87,10 @@
                         <i id="change_icon4" class="layui-icon layui-icon-chart-screen icon_li"></i>&nbsp;
                         <span id="change_text4" class="text_color">统计报表</span></a>
                     <dl id="list4" class="layui-nav-child nav_child">
-                        <dd class="nav_child2" onclick="changeDdColor('list4_font1');"><a id="list4_font1"
-                                                                                          href="javascript:;" style="color: rgb(183,36,36);">租金统计</a></dd>
-                        <dd class="nav_child2" onclick="changeDdColor('list4_font1');"><a id="list4_font2"
-                                                                                          href="javascript:;" style="color: rgb(183,36,36);">费用统计</a></dd>
+                        <dd class="nav_child2" ><a id="list4_font1"
+                                                   href="javascript:;">租金统计</a></dd>
+                        <dd class="nav_child2" ><a id="list4_font2"
+                                                   href="javascript:;" >费用统计</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item border_bottom arrow_color">
@@ -100,16 +100,16 @@
                         <i id="change_icon5" class="layui-icon layui-icon-set-fill icon_li"></i>&nbsp;
                         <span id="change_text5" class="text_color">系统设置</span></a>
                     <dl id="list5" class="layui-nav-child nav_child">
-                        <dd class="nav_child2" onclick="changeDdColor('list5_font1');"><a id="list5_font1"
-                                                                                          href="javascript:;" style="color: rgb(183,36,36);">社区管理</a></dd>
-                        <dd class="nav_child2" onclick="changeDdColor('list5_font2');"><a id="list5_font2"
-                                                                                          href="javascript:;" style="color: rgb(183,36,36);">小区管理</a></dd>
-                        <dd class="nav_child2" onclick="changeDdColor('list5_font3');"><a id="list5_font3"
-                                                                                          href="javascript:;" style="color: rgb(183,36,36);">账户设置</a></dd>
-                        <dd class="nav_child2" onclick="changeDdColor('list5_font4');"><a id="list5_font4"
-                                                                                          href="javascript:;" style="color: rgb(183,36,36);">收费类型</a></dd>
-                        <dd class="nav_child2" onclick="changeDdColor('list5_font5');"><a id="list5_font5"
-                                                                                          href="javascript:;" style="color: rgb(183,36,36);">预留时间标准</a></dd>
+                        <dd class="nav_child2"><a id="list5_font1"
+                                                  href="javascript:;" >社区管理</a></dd>
+                        <dd class="nav_child2"><a id="list5_font2"
+                                                  href="javascript:;" >小区管理</a></dd>
+                        <dd class="nav_child2" ><a id="list5_font3"
+                                                   href="javascript:;" >账户设置</a></dd>
+                        <dd class="nav_child2" ><a id="list5_font4"
+                                                   href="javascript:;" >收费类型</a></dd>
+                        <dd class="nav_child2" ><a id="list5_font5"
+                                                   href="javascript:;">预留时间标准</a></dd>
                     </dl>
                 </li>
 
@@ -135,7 +135,7 @@
     </div>
 
     <div class="layui-footer "
-         style="left: 250px;background-color: white;">
+         style="left: 250px;background-color: white; box-shadow: 0 1px 2px 0 rgb(0 0 0/10%);">
         Copyright&#169; 2021 苏州市相城元惠物业管理有限公司 版权所有
 
     </div>
@@ -146,7 +146,7 @@
     //Added the background-Color of each dd when the mouse click on it.
     //但是有個BUG: 會有藍綠色片刻出現!
     function changeDdColor(id) {
-        document.getElementById(id).style.backgroundColor = "rgb(215,120,120)";
+        //document.getElementById(id).style.backgroundColor = "rgb(215,120,120)";
     }
 
     //classTag1:
@@ -340,7 +340,6 @@
 
     // });
 </script>
-
 </body>
 
 </html>
