@@ -1,18 +1,87 @@
 
 
 .layui-tab-content {
-    background-color: #a5a2a2;
+    background-color: rgb(230,230,230);
     top:0;
     left: 0;
     right: 0;
     bottom: 0;
 
 }
+.nav_child{
+    /* top:-10px; */
+    /* padding:0px 0; */
+    background-color: whitesmoke;
 
-.nav_child {
-    background-color: #f64a4a;
+}
+/* .nav_child2{
+
+    text-align: center;
+    background-color: white;
+    color:inherit;
+} */
+/* .list1:hover{
+    background-color: rgb(215,120,120);
+    color: white;
+} */
+.nav_child2:hover {
+    background-color: rgb(215,120,120);
+    color: white;
 }
 
-.nav_parent a:hover{
-    color:darkred;
+.arrow_color{
+    color: rgb(183,60,78);
+}
+
+.nav_parent{
+    background-color:white;
+    text-align: center;
+
+    font-size: large;
+}
+.nav_parent:focus{
+    background-color:rgb(168, 8, 8);
+
+}
+
+.selected {
+    background-color: rgb(168, 8, 8);
+
+}
+.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this>a, .layui-nav-tree .layui-this>a:hover {
+    background-color: rgb(215,120,120);
+    color: #fff;
+}
+.layui-nav-tree .layui-nav-child a {
+    color: rgb(183,36,36);
+
+}
+/* dd.layui-this{background-color:rgb(215,120,120);color:#fff}
+dd.layui-this:after{
+    background-color:rgb(215,120,120);color:#fff
+} */
+
+.text_color{
+    font-size: large;
+    color: rgb(183,60,78);
+}
+
+.border_bottom{
+    border-bottom:1px ridge rgb(204,103,103);
+    border-spacing: 10px;
+    color: rgb(204,103,103);
+
+}
+
+.icon_li{
+    font-size: large; color: rgb(183,60,78);
+}
+.arrow_down{
+    font-size: large;
+    color: rgb(183,60,78);
+
+}
+
+.hidden {
+    display:none;
 }
