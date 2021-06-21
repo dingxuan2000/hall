@@ -34,5 +34,8 @@ public class User {
         this.age = age;
     }
 
+    public String toString(){
+        return id+" "+name+" "+age;
+    }
 
 }

@@ -1,3 +1,5 @@
+<#include "test2.ftlh" >
+<@test />
 <!DOCTYPE html>
 <html lang="en">
 <head>
