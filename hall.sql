@@ -12,6 +12,7 @@ CREATE TABLE user
 );
 
 insert into user values (1,'ads', 18);
+insert into user values (2,'xuan', 21);
 
 -- 丁璇
 create table comm_manager

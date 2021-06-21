@@ -1,3 +1,6 @@
+<#macro test>
+    hhhhhhhhhhhhh
+</#macro>
 <!DOCTYPE html>
 <html lang="en">
 <head>

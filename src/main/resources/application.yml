@@ -12,6 +12,7 @@ spring:
 
 
 
+
     hikari:
       connection-init-sql: set names utf8mb4
     tomcat:
@@ -22,4 +23,5 @@ spring:
       hibernate:
         ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL5Dialect
+
 

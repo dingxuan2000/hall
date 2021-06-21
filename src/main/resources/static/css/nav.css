@@ -14,12 +14,11 @@
     background-color: whitesmoke;
 
 }
-/* .nav_child2{
+.nav_child2{
 
     text-align: center;
-    background-color: white;
-    color:inherit;
-} */
+
+}
 /* .list1:hover{
     background-color: rgb(215,120,120);
     color: white;
@@ -37,7 +36,7 @@
     background-color:white;
     text-align: center;
 
-    font-size: large;
+    /*font-size: large;*/
 }
 .nav_parent:focus{
     background-color:rgb(168, 8, 8);
@@ -62,7 +61,7 @@ dd.layui-this:after{
 } */
 
 .text_color{
-    font-size: large;
+    /*font-size: large;*/
     color: rgb(183,60,78);
 }
 
@@ -74,14 +73,28 @@ dd.layui-this:after{
 }
 
 .icon_li{
-    font-size: large; color: rgb(183,60,78);
+    /*font-size: large; */
+    color: rgb(183,60,78);
 }
 .arrow_down{
-    font-size: large;
+    /*font-size: large;*/
     color: rgb(183,60,78);
 
 }
 
 .hidden {
     display:none;
+}
+
+.layui-table-box{
+    margin:0px;
+}
+
+.layui-tab-content {
+    padding: 15px 15px;
+}
+
+.layui-tab {
+    margin: 70px 0;
+
 }

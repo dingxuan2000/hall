@@ -1,12 +1,15 @@
 package com.example.hall.mysql;
 
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class UserController {
@@ -18,11 +21,35 @@ public class UserController {
     private UserServices UserServices;
 
 //    http://localhost:8080/getAll
+
+//    public List getAll(){
+//        List all = userDao.findAll();
+//        map.put("code", 0);
+//        map.put("count", userDao.countAll());select count(*) from xxx
+//        map.put("data", all);
+//        map.put("msg", "query OK!");
+//        map.put("msg", "query error!");
+//        return all;
+//    }
+
     @GetMapping("/getAll")
-    public List getAll(){
+    public Map<String, Object> getAll() {
         List all = userDao.findAll();
-        return all;
+//        JSONObject result = new JSONObject();
+        Map<String, Object> result = new HashMap<>();
+        try {
+            System.out.println("data: " + all);
+            result.put("code", "0");
+            result.put("count", userDao.count());
+            result.put("data", all);
+            result.put("msg", "Query OK!");
+        } catch (Exception e) {
+            result.put("code", "500");
+            result.put("msg", "Query error!");
+        }
+        return result;
     }
+
 
 //    http://localhost:8080/add?name=asdasd&age=13  用postman测试
     @GetMapping("/add")
