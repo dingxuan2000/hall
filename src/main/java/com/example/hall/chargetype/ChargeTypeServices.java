@@ -41,6 +41,11 @@ public class ChargeTypeServices implements Services<ChargeType> {
 
     }
 
+    @Override
+    public ChargeType updateById(Integer anId, ChargeType anObj) {
+        return null;
+    }
+
 
 }
 

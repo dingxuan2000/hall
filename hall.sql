@@ -64,5 +64,19 @@ CREATE TABLE hall_manager
     hall_deposit int not null,
     primary key (hall_id)
 );
-
 insert into hall_manager values (1,'ads', 'qwe', 'zxc', 'gdf', 1,2,3);
+
+create table hall_manager_detail
+(
+    hall_detail_id int not null auto_increment,
+    hall_id int not null,
+    hall_detail_floor varchar(32),
+    hall_detail_unit varchar(32),
+    hall_detail_table_num int,
+    hall_detail_rent int,
+    hall_detail_area int,
+    foreign key (hall_id) references hall_manager(hall_id),
+    primary key (hall_detail_id)
+);
+
+

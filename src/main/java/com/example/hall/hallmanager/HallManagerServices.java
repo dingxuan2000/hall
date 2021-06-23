@@ -39,4 +39,19 @@ public class HallManagerServices implements Services<HallManager> {
 
 
     }
+
+    @Override
+    public HallManager updateById(Integer id, HallManager hallManager) {
+        if(!hallManagerDao.existsById(id)){
+            System.out.println("订单管理id没找到");
+        }
+        try {
+            hallManager.setHall_id(id);
+            save(hallManager);
+            return hallManager;
+
+        }catch (RuntimeException e){
+            return null;
+        }
+    }
 }
