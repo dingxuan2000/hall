@@ -18,11 +18,6 @@
 
         </div>
     </div>
-<#--                <script type="text/html" id="barDemo">-->
-<#--                    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>-->
-<#--                    <a class="layui-btn layui-btn-xs" lay-event="more">更多 </a>-->
-<#--                </script>-->
-
 
     <script>
 
@@ -33,7 +28,7 @@
 
 
             //向世界问个好
-            layer.msg('Hello World');
+            // layer.msg('Hello World');
 
             //监听Tab切换
             // element.on('tab(demo2)', function (data) {

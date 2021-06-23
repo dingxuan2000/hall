@@ -106,11 +106,11 @@
                             <dd class="nav_child2"><a id="list5_font1"
                                                       href="/commManager">社区管理</a></dd>
                             <dd class="nav_child2"><a id="list5_font2"
-                                                      href="javascript:;">小区管理</a></dd>
+                                                      href="/houseManager">小区管理</a></dd>
                             <dd class="nav_child2"><a id="list5_font3"
                                                       href="javascript:;">账户设置</a></dd>
                             <dd class="nav_child2"><a id="list5_font4"
-                                                      href="javascript:;">收费类型</a></dd>
+                                                      href="/charge">收费类型</a></dd>
                             <dd class="nav_child2"><a id="list5_font5"
                                                       href="javascript:;">预留时间标准</a></dd>
                         </dl>

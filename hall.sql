@@ -22,6 +22,9 @@ create table comm_manager
     primary key (comm_id)
 );
 
+insert into comm_manager values (1,'commTest1');
+insert into comm_manager values (2,'commTest2');
+
 -- lucy & huang
 create table house_manager
 (
@@ -29,8 +32,12 @@ create table house_manager
     house_name varchar(255) not null comment '小区名称',
     comm_id int not null,
     foreign key (comm_id) references comm_manager(comm_id) ON DELETE CASCADE ON UPDATE CASCADE,
+#     foreign key (comm_id) references comm_manager(comm_id),
     primary key (house_id)
 );
+
+insert into house_manager values (1,'houseTest1', 1);
+insert into house_manager values (2,'houseTest2', 2);
 
 -- steven
 create table charge_type
@@ -40,6 +47,9 @@ create table charge_type
     charge_unit varchar(255) not null comment '计价单位',
     primary key (charge_id)
 );
+
+insert into charge_type values (1,'electricity', 'xx');
+insert into charge_type values (2,'water', 'yy');
 
 -- yang
 CREATE TABLE hall_manager
