@@ -1,6 +1,5 @@
 package com.example.hall.mysql;
 
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -69,11 +68,11 @@ public class UserController {
         return "delete";
     }
 
-    @GetMapping("/deleteAll")
-    public String deleteAll(){
-        userDao.deleteAll();
-        return "delete All";
-    }
+//    @GetMapping("/deleteAll")
+//    public String deleteAll(){
+//        userDao.deleteAll();
+//        return "delete All";
+//    }
 
 
     @PostMapping(path="/addAll", produces = "application/json")
