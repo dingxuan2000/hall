@@ -1,5 +1,3 @@
-<#include "test2.ftlh" >
-<@test />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,27 +10,11 @@
 <h1>hello word</h1>
 <button id="add">add</button>
 <button id="delete">delete</button>
+<button id="update">update</button>
 <script>
     const add = document.getElementById("add");
     const deleteById = document.getElementById("delete");
-
-    // let name = "zanyuan";
-    // let age = 12;
-    //
-    // add.addEventListener("click", ()=>{
-    //     let xhr = new XMLHttpRequest();
-    //     xhr.open("POST", "http://localhost:8080/addAll", true);
-    //     xhr.setRequestHeader("Content-Type", "application/json");
-    //     let data = JSON.stringify({ "name": name, "age": age });
-    //     xhr.send(data);
-    // })
-    //
-    // deleteById.addEventListener("click", ()=>{
-    //     let xhr = new XMLHttpRequest();
-    //     xhr.open("DELETE", "http://localhost:8080/deletebyid/5");
-    //     xhr.setRequestHeader("Content-Type", "application/json");
-    //     xhr.send();
-    // })
+    const updateById = document.getElementById("update");
 
     add.addEventListener("click", ()=>{
         let xhr = new XMLHttpRequest();
@@ -52,11 +34,29 @@
 
     deleteById.addEventListener("click", ()=>{
         console.log("hello");
-    let xhr = new XMLHttpRequest();
-    xhr.open("DELETE", "http://localhost:8080/deletebyid/1");
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send();
+        let xhr = new XMLHttpRequest();
+        xhr.open("DELETE", "http://localhost:8080/deletebyid/1");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send();
     })
+
+    updateById.addEventListener("click", ()=>{
+        console.log("hello");
+        let xhr = new XMLHttpRequest();
+        xhr.open("PUT", "http://localhost:8080/updatebyid/1", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        let updatedata = JSON.stringify({
+            "hall_name": "社区test",
+            "hall_community": "小区test",
+            "hall_house": "小区名字test",
+            "hall_address": "地址test",
+            "hall_area": 421,
+            "hall_table_num": 1002,
+            "hall_deposit": 502
+        });
+        xhr.send(updatedata);
+    })
+
 
 
 

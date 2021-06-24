@@ -38,4 +38,9 @@ public class HouseManagerServices implements Services<HouseManager> {
 
 
     }
+
+    @Override
+    public HouseManager updateById(Integer anId, HouseManager anObj) {
+        return null;
+    }
 }
