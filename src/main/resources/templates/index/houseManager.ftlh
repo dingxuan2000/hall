@@ -54,7 +54,7 @@
                 {field: 'house_id', title: '小区编码', width: 150, sort: true, fixed: 'left'}
                 , {field: 'house_name', title: '小区名称', width: 150}
                 , {field: 'comm_id', title: '社区编码', width: 150}
-                // , {field: 'change', title: '社区名称', width: 150}
+                , {field: 'comm_name', title: '社区名称', width: 150}
             ]]
         });
     })
