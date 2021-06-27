@@ -22,8 +22,9 @@ create table comm_manager
     primary key (comm_id)
 );
 
-insert into comm_manager values (1,'commTest1');
-insert into comm_manager values (2,'commTest2');
+
+insert into comm_manager values(1, '北固湾社区');
+
 
 -- lucy & huang 小区管理
 create table house_manager
@@ -35,8 +36,6 @@ create table house_manager
     primary key (house_id)
 );
 
-insert into house_manager values (1,'houseTest1', 1, 'commTest1');
-insert into house_manager values (2,'houseTest2', 2, 'commTest2');
 
 -- steven 收费类型
 create table charge_type
@@ -47,10 +46,7 @@ create table charge_type
     primary key (charge_id)
 );
 
-insert into charge_type values (1,'electricity', 'xx');
-insert into charge_type values (2,'water', 'yy');
 
--- steven
 create table utility_type
 (
     utility_id int not null auto_increment,
@@ -77,7 +73,6 @@ CREATE TABLE hall_manager
     hall_deposit int not null,
     primary key (hall_id, hall_name)
 );
-insert into hall_manager values (1,'ads', 'qwe', 'zxc', 'gdf', 1, 2, 3);
 
 create table hall_manager_detail
 (
@@ -91,4 +86,8 @@ create table hall_manager_detail
     foreign key (hall_id) references hall_manager(hall_id),
     primary key (hall_detail_id)
 );
+
+
+
+
 
