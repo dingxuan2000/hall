@@ -95,6 +95,39 @@ dd.layui-this:after{
 }
 
 .layui-tab {
-    margin: 70px 0;
+    margin: 40px 0;
 
+}
+
+.layui-input {
+    /* display: block; */
+    width: 400px;
+
+
+}
+
+/*#submit_comm {*/
+/*    width: 550px;*/
+/*    background-color: rgb(232,173,173);*/
+/*    margin-top: 25px;*/
+
+/*}*/
+
+.layui-table-body {
+    background-color: white;
+}
+
+.layui-layer-btn .layui-layer-btn0 {
+    text-align: center;
+    position: center;
+    width: 100%;
+    background-color: rgb(232,173,173);
+    /*margin-top: 25px;*/
+    margin-left: -16px;
+    margin-top: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*margin-bottom: 10px;*/
+    border-color: white;
+    font-size:16px
 }

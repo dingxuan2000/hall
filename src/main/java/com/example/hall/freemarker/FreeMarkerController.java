@@ -32,10 +32,11 @@ public class FreeMarkerController {
     }
 
 
+
 //    ModelAndView page1(){
 //        ModelAndView mv = new ModelAndView();
 //        mv.addObject("title","子页面标题");
-//        mv.setViewName("index/commManager");
+//        mv.setViewName("index/com.example.hall.commManager");
 //        return mv;
 //    }
 
@@ -47,5 +48,10 @@ public class FreeMarkerController {
     @GetMapping("/test2")
     public String test2(){
         return "/test/test2";
+    }
+
+    @GetMapping("/test3")
+    public String test3(){
+        return "/test/test3";
     }
 }
