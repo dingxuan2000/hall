@@ -28,4 +28,9 @@ public class UserServices implements Services<User> {
         return user;
     }
 
+    @Override
+    public User updateById(Integer anId, User anObj) {
+        return null;
+    }
+
 }

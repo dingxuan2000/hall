@@ -1,5 +1,4 @@
-package com.example.hall.chargetype;
-
+package com.example.hall.houseManager;
 
 import com.example.hall.services.Services;
 import lombok.AllArgsConstructor;
@@ -10,29 +9,28 @@ import org.springframework.transaction.annotation.Transactional;
 @AllArgsConstructor
 @Service
 @Transactional
-public class ChargeTypeServices implements Services<ChargeType> {
+public class HouseManagerServices implements Services<HouseManager> {
 
     @Autowired
-    ChargeTypeDao chargeTypeDao;
+    HouseManagerDao houseManagerDao;
 
     @Override
-    public ChargeType save(ChargeType chargeType) {
-        chargeTypeDao.save(chargeType);
-        return chargeType;
+    public HouseManager save(HouseManager houseManager) {
+        houseManagerDao.save(houseManager);
+        return houseManager;
     }
 
-
     @Override
-    public ChargeType deleteById(Integer id) {
+    public HouseManager deleteById(Integer id) {
 
-        if(!chargeTypeDao.existsById(id)){
+        if(!houseManagerDao.existsById(id)){
             System.out.println("NotFoundException: "+ "id is not in the DB");
         }
 
         try {
-            ChargeType chargeType = chargeTypeDao.findById(id).orElse(null);
-            chargeTypeDao.deleteById(id);
-            return chargeType;
+            HouseManager houseManager = houseManagerDao.findById(id).orElse(null);
+            houseManagerDao.deleteById(id);
+            return houseManager;
         }catch (Exception e){
             System.out.println("VehicleServiceValidationException");
             return null;
@@ -42,10 +40,7 @@ public class ChargeTypeServices implements Services<ChargeType> {
     }
 
     @Override
-    public ChargeType updateById(Integer anId, ChargeType anObj) {
+    public HouseManager updateById(Integer anId, HouseManager anObj) {
         return null;
     }
-
-
 }
-

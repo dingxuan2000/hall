@@ -22,7 +22,9 @@ create table comm_manager
     primary key (comm_id)
 );
 
+
 insert into comm_manager values(1, '北固湾社区');
+
 
 -- lucy & huang 小区管理
 create table house_manager
@@ -34,6 +36,7 @@ create table house_manager
     primary key (house_id)
 );
 
+
 -- steven 收费类型
 create table charge_type
 (
@@ -42,6 +45,7 @@ create table charge_type
     charge_unit varchar(255) not null comment '计价单位',
     primary key (charge_id)
 );
+
 
 create table utility_type
 (
@@ -82,3 +86,8 @@ create table hall_manager_detail
     foreign key (hall_id) references hall_manager(hall_id),
     primary key (hall_detail_id)
 );
+
+
+
+
+

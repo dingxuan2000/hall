@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 @RestController
 public class HallManagerController {
@@ -25,5 +26,19 @@ public class HallManagerController {
         System.out.println("[Delete one hall manager] parameters: "+ id);
         return new ResponseEntity<>(hallManagerServices.deleteById(id), HttpStatus.OK);
     }
+
+    //http://localhost:8080/updatebyid/{id}
+    @PutMapping(path="/updatebyid/{id}", produces = "application/json")
+    public ResponseEntity<HallManager> updateGoodById(@NotNull @PathVariable Integer id,
+                                               @Valid @RequestBody HallManager hallManager){
+        //id is not match
+        if(!id.equals(hallManager.getHall_id())) {
+            new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+        System.out.println("小区管理修改成功");
+        return new ResponseEntity<>(hallManagerServices.updateById(id, hallManager), HttpStatus.CREATED);
+    }
+
+
 
 }
