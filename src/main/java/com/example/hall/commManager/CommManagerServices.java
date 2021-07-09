@@ -1,5 +1,6 @@
 package com.example.hall.commManager;
 
+import com.example.hall.houseManager.HouseManager;
 import com.example.hall.services.Services;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,23 @@ public class CommManagerServices implements Services<CommManager> {
             return null;
         }
     }
+
+    @Override
+
+    public CommManager updateById(Integer id, CommManager commManager) {
+        if(!commManagerDao.existsById(id)){
+            System.out.println("订单管理id没找到");
+        }
+        try {
+            commManager.setComm_id(id);
+            save(commManager);
+            return commManager;
+
+        }catch (RuntimeException e){
+            return null;
+        }
+    }
 }
+
 
 
