@@ -1,9 +1,16 @@
 
     //Added the background-Color of each dd when the mouse click on it.
     //但是有個BUG: 會有藍綠色片刻出現!
-    function changeDdColor(id) {
+    //function changeDdColor(id) {
     //document.getElementById(id).style.backgroundColor = "rgb(215,120,120)";
-}
+//}
+
+//TEST: 母版页的触发事件:
+//     let testBtn = document.getElementById("list5_font1");
+//     testBtn.addEventListener('click', function (){
+//         alert('I am work');
+//     })
+
 
     //Changed the Font-Color and Icon-Color of each <li> tag in the nav bar to white.
     function changeColor(id1, id2, list) {
@@ -17,7 +24,7 @@
      * and Icon-Color to red. 分成了多种情况，比较累赘，但目前没其他方法了...
      * **/
     //classTag1:
-    let container = document.getElementsByClassName('nav_parent')[0];
+    var container = document.getElementsByClassName('nav_parent')[0];
     document.addEventListener('click', function (event) {
     if (container !== event.target && !container.contains(event.target)) {
     console.log('clicking outside the div');
@@ -36,7 +43,7 @@
 });
 
     //classTag2:
-    let container2 = document.getElementsByClassName('nav_parent')[1];
+    var container2 = document.getElementsByClassName('nav_parent')[1];
     document.addEventListener('click', function (event) {
 
     if (container2 !== event.target && !container2.contains(event.target)) {
@@ -57,7 +64,7 @@
 });
 
     //classTag3:
-    let container3 = document.getElementsByClassName('nav_parent')[2];
+    var container3 = document.getElementsByClassName('nav_parent')[2];
     document.addEventListener('click', function (event) {
     if (container3 !== event.target && !container3.contains(event.target)) {
     console.log('clicking outside the div');
@@ -76,7 +83,7 @@
 });
 
     //classTag4:
-    let container4 = document.getElementsByClassName('nav_parent')[3];
+    var container4 = document.getElementsByClassName('nav_parent')[3];
     document.addEventListener('click', function (event) {
     if (container4 !== event.target && !container4.contains(event.target)) {
     console.log('clicking outside the div');
@@ -95,7 +102,7 @@
 });
 
     //classTag5:
-    let container5 = document.getElementsByClassName('nav_parent')[4];
+    var container5 = document.getElementsByClassName('nav_parent')[4];
     document.addEventListener('click', function (event) {
     if (container5 !== event.target && !container5.contains(event.target)) {
     console.log('clicking outside the div');

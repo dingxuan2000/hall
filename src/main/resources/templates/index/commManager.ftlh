@@ -1,6 +1,7 @@
-<#include "index.ftlh" >
+<#include "masterTemplate.ftlh" >
 <@masterTemplate />
 
+<#--用iframe写子页面，隐藏url-->
 <div class="layui-body" style="left: 250px; top: 20px;">
     <!-- 内容主体区域 -->
     <div class="layui-tab">
@@ -87,6 +88,11 @@
     </div>
 </div>
 
+<#--<script src="./layui/layui.js"></script>-->
+<#--<link rel="stylesheet" href="./layui/css/layui.css">-->
+<#--<link rel="stylesheet" href="./css/nav.css">-->
+<#--<script src="./js/index.js"></script>-->
+<#--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 
 <script>
 
