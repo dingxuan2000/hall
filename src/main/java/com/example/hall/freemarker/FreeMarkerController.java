@@ -14,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -29,6 +31,7 @@ public class FreeMarkerController {
     @Autowired
     private HouseManagerDao houseManagerDao;
 
+
     @GetMapping("/index")
     public String index(ModelMap map){
         List<User> userList = userDao.findAll();
@@ -43,6 +46,7 @@ public class FreeMarkerController {
         return "/index/commManager";
     }
 
+
     @GetMapping("/charge")
     public String index3(ModelMap map){
         List<ChargeType> chargeTypeList = chargeTypeDao.findAll();
@@ -56,6 +60,7 @@ public class FreeMarkerController {
         map.put("houseManagerTypeList", houseManagerList);
         return "/index/houseManager";
     }
+
 
 
 
@@ -79,5 +84,10 @@ public class FreeMarkerController {
     @GetMapping("/test3")
     public String test3(){
         return "/test/test3";
+    }
+
+    @GetMapping("/test4")
+    public String test4(){
+        return "/test/test4";
     }
 }

@@ -1,26 +1,31 @@
 <#include "masterTemplate.ftlh" >
-<@masterTemplate />
+<#--<@masterTemplate />-->
 
+<link rel="stylesheet" href="./layui/css/layui.css">
+<link rel="stylesheet" href="./css/nav.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./layui/layui.js"></script>
+<script src="./js/index.js"></script>
 <#--用iframe写子页面，隐藏url-->
-<div class="layui-body" style="left: 250px; top: 20px;">
+<#--<div class="layui-body" style="left: 250px; top: 20px;">-->
     <!-- 内容主体区域 -->
-    <div class="layui-tab">
-        <ul class="layui-tab-title">
-            <li class="layui-icon layui-icon-prev"></li>
-            <li class="layui-this">
-                <div class="layui-icon layui-icon-home"></div>
-            </li>
-        </ul>
+<#--    <div class="layui-tab">-->
+<#--        <ul class="layui-tab-title">-->
+<#--            <li class="layui-icon layui-icon-prev"></li>-->
+<#--            <li class="layui-this">-->
+<#--                <div class="layui-icon layui-icon-home"></div>-->
+<#--            </li>-->
+<#--        </ul>-->
 
-        <div class="layui-tab-content layui-show" style="height: 1000px;">
-            <!--子页面区域-->
+<#--        <div class="layui-tab-content layui-show" style="height: 1000px; left: 250px; top: 20px;">-->
+<#--            <!--子页面区域&ndash;&gt;-->
 
-            <table class="layui-hide" id="demo2" lay-filter="test"></table>
-        </div>
+            <table class="layui-hide" id="demo2" lay-filter="test" style="left: 250px; top: 20px;"></table>
+<#--        </div>-->
 
-    </div>
+<#--    </div>-->
 
-</div>
+<#--</div>-->
 
 <#--添加button-->
 <script type="text/html" id="toolbarDemo">
