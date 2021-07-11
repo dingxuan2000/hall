@@ -1,6 +1,46 @@
-<#include "index.ftlh" >
+<#include "masterTemplate.ftlh" >
 <@masterTemplate />
 
+<style>
+<#--弹出窗口"确认"键的样式修改-->
+    .layui-layer-iframe .layui-layer-btn, .layui-layer-page .layui-layer-btn {
+        padding-top: 33px;
+    }
+
+    .layui-layer-btn {
+        text-align: center;
+        padding: 0;
+        pointer-events: auto;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    .layui-layer-btn .layui-layer-btn0 {
+        border-color: #E7ACAD;
+        background-color: #E7ACAD;
+        color: #C74E4C;
+    }
+
+    .layui-layer-btn a {
+        height: 40px;
+        line-height: 41px;
+        margin: 0;
+        padding: 0 15px;
+        border: 1px solid #dedede;
+        background-color: #fff;
+        color: #333;
+        border-radius: 2px;
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+        width: -webkit-fill-available;
+    }
+/*底部序列号颜色更改*/
+    .layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #B72523;
+    }
+
+</style>
+<#--用iframe写子页面，隐藏url-->
 <div class="layui-body" style="left: 250px; top: 20px;">
     <!-- 内容主体区域 -->
     <div class="layui-tab">
@@ -33,7 +73,7 @@
 <#--编辑&删除button-->
 <script type="text/html" id="barDemo">
     <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">编辑</a>
-    <a class="layui-btn layui-btn-xs" lay-event="del">删除 </a>
+    <a class="layui-btn layui-btn-xs" lay-event="del" style="background-color:#B72523">删除 </a>
 </script>
 
 <#--新增的弹出窗口-->
@@ -87,6 +127,11 @@
     </div>
 </div>
 
+<#--<script src="./layui/layui.js"></script>-->
+<#--<link rel="stylesheet" href="./layui/css/layui.css">-->
+<#--<link rel="stylesheet" href="./css/nav.css">-->
+<#--<script src="./js/index.js"></script>-->
+<#--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 
 <script>
 
@@ -103,8 +148,8 @@
         table.render({
             elem: '#demo2'
             , url: '/getCommManager'
-            , height: 1000
-            , width: 800
+            , height: 700
+            , width:880
             , title: '用户表'
             , page: true //开启分页
             , toolbar: '#toolbarDemo' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
@@ -113,7 +158,7 @@
 
                 {field: 'id', title: '序号', width: 80, sort: true, fixed: 'left',templet: '#autoId'}
                 , {field: 'comm_name', title: '社区名称', width: 400}
-                ,{field: 'modified', title:'操作', width: 200, toolbar:'#barDemo'}
+                ,{field: 'modified', title:'操作', width: 400, toolbar:'#barDemo'}
 
 
             ]]
